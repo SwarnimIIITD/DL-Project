@@ -6,6 +6,12 @@ from io import BytesIO
 from PIL import Image
 import tensorflow as tf
 tf.config.set_visible_devices([], 'GPU')
+import os
+
+if __name__ == "__main__":
+    # Use the Render-specified port, default to 8000 if not set
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
 
 app = FastAPI()
 
