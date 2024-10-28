@@ -23,7 +23,7 @@ app.add_middleware(
 )
 
 # Load the model directly within the FastAPI app
-MODEL_PATH = "./1.h5" # Update with your actual model path
+MODEL_PATH = "./1.keras" # Update with your actual model path
 model = tf.keras.models.load_model(MODEL_PATH)
 CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]  # Update with your actual class names
 
