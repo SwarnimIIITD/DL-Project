@@ -5,6 +5,7 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
+tf.config.set_visible_devices([], 'GPU')
 
 app = FastAPI()
 
